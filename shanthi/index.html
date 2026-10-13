@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shanthi Productions | Stories. Frames. Cinema.</title>
+  <meta name="description" content="Shanthi Productions is a film and creative production company bringing stories to life through cinema.">
+  <meta name="theme-color" content="#070707">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23d6ac52'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23070707'/%3E%3Ccircle cx='32' cy='14' r='6' fill='%23070707'/%3E%3Ccircle cx='32' cy='50' r='6' fill='%23070707'/%3E%3Ccircle cx='14' cy='32' r='6' fill='%23070707'/%3E%3Ccircle cx='50' cy='32' r='6' fill='%23070707'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Dancing+Script:wght@600&family=Jost:wght@300;400;500&display=swap">
+
+  <!-- Critical: the preloader must cover the page from the very first paint -->
+  <script>document.documentElement.classList.add('js')</script>
+  <style>
+    html{background:#050505}
+    #preloader{position:fixed;inset:0;z-index:1000;background:#050505}
+    body.is-loading{overflow:hidden}
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>#preloader{display:none!important}body.is-loading{overflow:auto!important}</style></noscript>
+</head>
+<body class="is-loading">
+
+  <!-- Reference footage plays as-is; the animated artwork is the playback fallback. -->
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading Shanthi Productions">
+    <div class="pre-stage" id="preStage">
+      <video class="pre-video" id="preloaderVideo" muted playsinline preload="none" aria-hidden="true">
+        <source src="assets/preloader-reference.mp4" type="video/mp4">
+      </video>
+
+      <div class="pre-camera">
+        <div class="pre-world">
+          <div class="pre-spot"></div>
+          <div class="pre-floor"></div>
+
+          <img class="pre-chair" src="assets/director-chair.svg" alt="Director's chair" width="360" height="580">
+
+          <img class="pre-strip-sweep" src="assets/strip-sweep.svg" alt="" width="1100" height="470">
+
+          <div class="pre-reel"><img class="pre-reel-img" src="assets/film-reel.svg" alt="Film reel" width="340" height="340"></div>
+
+          <div class="pre-proj">
+            <img class="pre-proj-body" src="assets/projector-body.svg" alt="Film projector" width="480" height="380">
+            <img class="pre-wheel pre-wheel-a" src="assets/projector-wheel.svg" alt="" width="140" height="140">
+            <img class="pre-wheel pre-wheel-b" src="assets/projector-wheel.svg" alt="" width="140" height="140">
+            <div class="pre-beam"></div>
+          </div>
+
+          <img class="pre-strip-proj" src="assets/strip-proj.svg" alt="" width="900" height="460">
+          <img class="pre-strip-low" src="assets/strip-low.svg" alt="" width="800" height="300">
+
+          <div class="pre-clap">
+            <img class="pre-clap-board" src="assets/clapper-board.svg" alt="Clapperboard" width="420" height="340">
+            <img class="pre-clap-stick" src="assets/clapper-stick.svg" alt="" width="420" height="60">
+          </div>
+        </div>
+      </div>
+
+      <img class="pre-wave pre-wave-a" src="assets/strip-wave.svg" alt="" width="1344" height="470">
+      <img class="pre-wave pre-wave-b" src="assets/strip-wave.svg" alt="" width="1344" height="470">
+
+      <div class="pre-lockup">
+        <img class="pre-ring" src="assets/strip-ring.svg" alt="" width="1040" height="720">
+        <div class="pre-icon">
+          <img class="pre-icon-reel" src="assets/film-reel.svg" alt="" width="340" height="340">
+          <div class="pre-icon-proj">
+            <img src="assets/projector-body.svg" alt="" width="480" height="380">
+            <img class="pre-wheel pre-wheel-a" src="assets/projector-wheel.svg" alt="" width="140" height="140">
+            <img class="pre-wheel pre-wheel-b" src="assets/projector-wheel.svg" alt="" width="140" height="140">
+          </div>
+          <div class="pre-icon-beam"></div>
+        </div>
+        <h1 class="pre-brand">SHANTHI</h1>
+        <p class="pre-prod" aria-hidden="true"><span>P</span><span>R</span><span>O</span><span>D</span><span>U</span><span>C</span><span>T</span><span>I</span><span>O</span><span>N</span><span>S</span></p>
+        <p class="pre-tag">Stories. Frames. Cinema.</p>
+        <span class="pre-flare"></span>
+      </div>
+
+      <div class="pre-flash"></div>
+      <span class="pre-scratch"></span>
+      <div class="pre-dust" aria-hidden="true"></div>
+      <div class="pre-grain"></div>
+    </div>
+    <div class="pre-vignette"></div>
+  </div>
+
+  <!-- ============================== WEBSITE ============================== -->
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#home" aria-label="Shanthi Productions, home">
+      <span class="nav-brand-main">SHANTHI</span>
+      <span class="nav-brand-sub">PRODUCTIONS</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#productions">Productions</a>
+      <a href="#work">Our Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-light"></div>
+        <div class="hero-emblem">
+          <img class="hero-strip" src="assets/strip-ring.svg" alt="" width="1040" height="720">
+          <img class="hero-reel" src="assets/film-reel.svg" alt="" width="340" height="340">
+        </div>
+      </div>
+      <div class="hero-copy">
+        <h1 class="hero-title">SHANTHI<br>PRODUCTIONS</h1>
+        <p class="hero-lede">Bringing stories to life through cinema.</p>
+        <a class="btn" href="#work">Explore Our Work</a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-art" aria-hidden="true">
+        <div class="about-glow"></div>
+        <div class="about-clap">
+          <img src="assets/clapper-board.svg" alt="" width="420" height="340" loading="lazy">
+          <img class="about-stick" src="assets/clapper-stick.svg" alt="" width="420" height="60" loading="lazy">
+        </div>
+      </div>
+      <div class="about-copy">
+        <h2>A production company built around the story.</h2>
+        <p>Shanthi Productions is a film and creative production company. We shape ideas into finished work for the screen, from the first conversation about a script to the final grade and sound mix.</p>
+        <p>Every project starts with a simple question: what does this story need to feel true on screen? The answer guides our casting, our camera, our edit, and the way we work with the people involved.</p>
+      </div>
+    </section>
+
+    <section class="section productions" id="productions">
+      <div class="section-head">
+        <h2>What we make</h2>
+        <p>Proposed service areas. Edit this list to match what Shanthi Productions offers.</p>
+      </div>
+      <ul class="services">
+        <li>
+          <h3>Film Production</h3>
+          <p>Short films and features, produced with a crew matched to the story and the budget.</p>
+        </li>
+        <li>
+          <h3>Video Production</h3>
+          <p>Brand films, promos, and documentary-style pieces shot and delivered for any screen.</p>
+        </li>
+        <li>
+          <h3>Cinematic Storytelling</h3>
+          <p>Narrative structure, visual language, and pacing that hold attention from the first frame.</p>
+        </li>
+        <li>
+          <h3>Creative Direction</h3>
+          <p>Concept, look, and tone, set early so every department works toward the same picture.</p>
+        </li>
+        <li>
+          <h3>Editing and Post-Production</h3>
+          <p>Edit, colour, sound, and finishing, handled in one place from rough cut to master.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section work" id="work">
+      <div class="section-head">
+        <h2>Our Work</h2>
+        <p>These tiles are placeholders. Replace each image and caption with a real project.</p>
+      </div>
+      <div class="work-grid">
+        <figure class="work-item w1">
+          <img src="assets/thumb-1.svg" alt="Placeholder thumbnail for project one" width="640" height="400" loading="lazy">
+          <figcaption><span>Project title one</span><em>Placeholder</em></figcaption>
+        </figure>
+        <figure class="work-item w2">
+          <img src="assets/thumb-2.svg" alt="Placeholder thumbnail for project two" width="640" height="400" loading="lazy">
+          <figcaption><span>Project title two</span><em>Placeholder</em></figcaption>
+        </figure>
+        <figure class="work-item w3">
+          <img src="assets/thumb-3.svg" alt="Placeholder thumbnail for project three" width="640" height="400" loading="lazy">
+          <figcaption><span>Project title three</span><em>Placeholder</em></figcaption>
+        </figure>
+        <figure class="work-item w4">
+          <img src="assets/thumb-4.svg" alt="Placeholder thumbnail for project four" width="640" height="400" loading="lazy">
+          <figcaption><span>Project title four</span><em>Placeholder</em></figcaption>
+        </figure>
+        <figure class="work-item w5">
+          <img src="assets/thumb-5.svg" alt="Placeholder thumbnail for project five" width="640" height="400" loading="lazy">
+          <figcaption><span>Project title five</span><em>Placeholder</em></figcaption>
+        </figure>
+        <figure class="work-item w6">
+          <img src="assets/thumb-6.svg" alt="Placeholder thumbnail for project six" width="640" height="400" loading="lazy">
+          <figcaption><span>Project title six</span><em>Placeholder</em></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-info">
+        <h2>Tell us about your story.</h2>
+        <p>Send a short note about what you are making and when you need it. We will reply with next steps.</p>
+        <dl class="contact-list" id="contactList"></dl>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="cName">Name</label>
+          <input id="cName" name="name" type="text" autocomplete="name" required>
+          <span class="field-error" id="cNameErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="cEmail">Email</label>
+          <input id="cEmail" name="email" type="email" autocomplete="email" required>
+          <span class="field-error" id="cEmailErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" name="message" rows="5" required></textarea>
+          <span class="field-error" id="cMessageErr" role="alert"></span>
+        </div>
+        <button class="btn" type="submit">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="nav-brand-main">SHANTHI</span>
+      <span class="nav-brand-sub">PRODUCTIONS</span>
+    </div>
+    <p class="footer-tag">Stories. Frames. Cinema.</p>
+    <p class="footer-copy">&copy; <span id="year">2026</span> Shanthi Productions</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
